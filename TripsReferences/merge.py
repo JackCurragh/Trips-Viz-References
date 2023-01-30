@@ -122,8 +122,10 @@ def merge(input_files: list, output_file: str, transcript_prefix="ENST") -> str:
             value = input_conn[key]
 
             # Insert value into output file
-            output_file[key] = value
-        
+        output_file[key] = value
+        print(input_conn["ENST00000587047"])
+        print(output_file["ENST00000587047"])
+        return 0
         # Close input file
         input_conn.close()
 
